@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Резюме</title>
+		<link href="style.css" rel="stylesheet">
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+	<body class="back">
+	<div align=center class="bottom-line">
+		<h1 style="font-size:50px;">Резюме</h1>
+		<h3>Кандидата на посаду розробника програмного забезпечення</h3>
+	</div>
+	<div style="padding-top:30px;" class="row">
+		<div class="col-6">
+			<p style="text-indent:20px">ПIБ: Лобанов Микита Сергійович</p>
+			<p style="text-indent:20px">Вiк: 19 рокiв</p>
+			<p style="text-indent:20px">Вивченi мови програмування: .Net, .Net Core, TypeScript</p>
+			<p style="text-indent:20px">Маю досвiд роботи з MySQL, SQL Compact</p>
+			<p style="text-indent:20px">Мови: Англiйська</p>
+	
+			<p style="text-indent:20px">email: nomadna123@gmail.com</p>
+			<p style="text-indent:20px">Phone: +380961735675</p>
+		</div>
+		<div class="col-6" style="margin-bottom:40px;">
+			<img width="500" height="500" src="C:\Users\nomad\eclipse-workspace\AboutAuthor\WebContent\photo.png">
+		</div>
+	</div>
+	</body>
+</html>

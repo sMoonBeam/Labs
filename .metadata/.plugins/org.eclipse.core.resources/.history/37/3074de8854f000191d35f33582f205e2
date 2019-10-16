@@ -1,0 +1,10 @@
+.bottom-line {
+	border-bottom: 2px solid black;
+}
+.back {
+	background-color: #ededed;
+}
+img {
+  border: 4px solid black;
+  
+}

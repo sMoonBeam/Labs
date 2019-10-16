@@ -1,0 +1,16 @@
+.bottom-line {
+	border-bottom: 2px solid black;
+}
+.back {
+	background-color: #ededed;
+}
+
+.some {
+	margin-bottom:240px;
+	margin-left: 10px;
+}
+
+img {
+  border: 4px solid black;
+  
+}

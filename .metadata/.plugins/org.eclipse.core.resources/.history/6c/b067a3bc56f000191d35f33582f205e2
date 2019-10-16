@@ -1,0 +1,122 @@
+package task3;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class HttpList
+ */
+public class HttpList extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	private ServletConfig config;
+
+	@Override
+	public void init(ServletConfig config) throws ServletException {
+		this.config = config;
+	}
+
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public HttpList() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		response.setContentType("text/html");
+		response.setCharacterEncoding("UTF-8");
+		PrintWriter writer = response.getWriter();
+		if (request.getParameter("login").equals(config.getInitParameter("login"))
+				& request.getParameter("password").equals(config.getInitParameter("password"))) {
+			writer.println(
+					"<h1 style='color: #3259b2'> Канцтовары </h1>" +
+					"<table>" + 
+					"  <colgroup>" + 
+					"    <col span='2' style='background:Khaki'>" + 
+					"    <col style='background-color:LightCyan'>" + 
+					"  </colgroup>" + 
+					"  <tr>" + 
+					"    <th>№ п/п</th>" + 
+					"    <th>Наименование</th>" + 
+					"    <th>Цена, грн.</th>" + 
+					"  </tr>" + 
+					"  <tr>" + 
+					"    <td>1</td>" + 
+					"    <td>Карандаш цветной</td>" + 
+					"    <td>20,00</td>" + 
+					"  </tr>" + 
+					"  <tr>" + 
+					"    <td>2</td>" + 
+					"    <td>Линейка 20 см</td>" + 
+					"    <td>30,00</td>" + 
+					"  </tr>" + 
+					"  <tr>" + 
+					"    <td>3</td>" + 
+					"    <td>Ручка черная</td>" + 
+					"    <td>25,00</td>" + 
+					"  </tr>" + 
+					"  <tr>" + 
+					"    <td>4</td>" + 
+					"    <td>Циркуль</td>" + 
+					"    <td>50,00</td>" + 
+					"  </tr>" +
+					"  <tr>" + 
+					"    <td>5</td>" + 
+					"    <td>Тетрадь 48 листов</td>" + 
+					"    <td>40,00</td>" + 
+					"  </tr>" + 
+					"  <tr>" + 
+					"    <td>6</td>" + 
+					"    <td>Ластик</td>" + 
+					"    <td>5,00</td>" + 
+					"  </tr>" + 
+					"  <tr>" + 
+					"    <td>7</td>" + 
+					"    <td>Корректор</td>" + 
+					"    <td>45,00</td>" + 
+					"  </tr>" + 
+					"  <tr>" + 
+					"    <td>8</td>" + 
+					"    <td>Пенал</td>" + 
+					"    <td>80,00</td>" + 
+					"  <tr>" + 
+					"    <td>9</td>" + 
+					"    <td>Скотч 45 м. односторонний</td>" + 
+					"    <td>35,00</td>" + 
+					"  </tr>" + 
+					"  </tr>" + 
+					"  <tr>" + 
+					"    <td>10</td>" + 
+					"    <td>Закладка</td>" + 
+					"    <td>10,00</td>" + 
+					"  </tr>" + 
+					"</table>");
+		} else {
+			writer.println("<a href='index.html'>Incorrect login or password. Try one more</a>");
+		
+		}
+		writer.close();
+	}
+}
